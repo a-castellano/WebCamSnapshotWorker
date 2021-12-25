@@ -10,5 +10,3 @@ name = "incoming"
 [outgoing]
 name = "outgoing"
 
-[ffmpeg]
-path = "/usr/bin/ffmpeg"
