@@ -33,10 +33,10 @@ func (s SnapshotHandler) DoSnapshot(job jobs.SnapshotJob) (string, error) {
 		return output, outputerr
 	}
 
-	streamUrl := fmt.Sprintf("rtsp://%s:%s@%s:%d%s", job.User, job.Password, job.IP, job.Port, job.SnapshotPath)
+	streamUri := fmt.Sprintf("rtsp://%s:%s@%s:%d%s", job.User, job.Password, job.IP, job.Port, job.SnapshotPath)
 	outputFile := fmt.Sprintf("/tmp/%s.jpg", output)
 
-	err := exec.Command(s.ffmpegPath, "-y", "-i", streamUrl, "-vframes", "1", outputFile).Run()
+	err := exec.Command(s.ffmpegPath, "-y", "-i", streamUri, "-vframes", "1", outputFile).Run()
 
 	if err != nil {
 		return "", err
