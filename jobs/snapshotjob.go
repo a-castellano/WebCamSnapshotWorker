@@ -13,6 +13,7 @@ type SnapshotJob struct {
 	IP           string `json:"ip"`
 	User         string `json:"user"`
 	Password     string `json:"password"`
+	Port         int    `json:"port"`
 	StreamPath   string `json:"streampath"`
 }
 
