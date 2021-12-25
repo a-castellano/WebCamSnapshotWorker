@@ -53,6 +53,18 @@ func TestProcessServerNoUserPasswordInConfig(t *testing.T) {
 	}
 }
 
+func TestProcessNoFfmpegPath(t *testing.T) {
+	os.Setenv("WEBCAM_SNAPSHOT_WORKER_SERVICE_CONFIG_FILE_LOCATION", "./config_files_test/no_ffmpeg_path/")
+	_, err := ReadConfig()
+	if err == nil {
+		t.Errorf("ReadConfig method without ffmpeg path should fail.")
+	} else {
+		if err.Error() != "Fatal error config: no ffmpeg path was found." {
+			t.Errorf("Error should be \"Fatal error config: no ffmpeg path was found.\" but error was '%s'.", err.Error())
+		}
+	}
+}
+
 func TestOKConfig(t *testing.T) {
 	os.Setenv("WEBCAM_SNAPSHOT_WORKER_SERVICE_CONFIG_FILE_LOCATION", "./config_files_test/ok/")
 	config, err := ReadConfig()

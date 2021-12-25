@@ -24,9 +24,10 @@ type Queue struct {
 }
 
 type Config struct {
-	Server   Server
-	Incoming Queue
-	Outgoing Queue
+	Server     Server
+	Incoming   Queue
+	Outgoing   Queue
+	FfmpegPath string
 }
 
 func ReadConfig() (Config, error) {
@@ -38,6 +39,7 @@ func ReadConfig() (Config, error) {
 	serverVariables := []string{"host", "port", "user", "password"}
 	queueNames := []string{"incoming", "outgoing"}
 	queueVariables := []string{"name"}
+	ffmpegVariables := []string{"path"}
 
 	viper := viperLib.New()
 
@@ -70,6 +72,12 @@ func ReadConfig() (Config, error) {
 		}
 	}
 
+	for _, ffmpeg_variable := range ffmpegVariables {
+		if !viper.IsSet("ffmpeg." + ffmpeg_variable) {
+			return config, errors.New("Fatal error config: no ffmpeg " + ffmpeg_variable + " was found.")
+		}
+	}
+
 	server := Server{User: viper.GetString("server.user"), Password: viper.GetString("server.password"), Host: viper.GetString("server.host"), Port: viper.GetInt("server.port")}
 	incoming := Queue{Name: viper.GetString("incoming.name")}
 	outgoing := Queue{Name: viper.GetString("outgoing.name")}
@@ -77,6 +85,7 @@ func ReadConfig() (Config, error) {
 	config.Server = server
 	config.Incoming = incoming
 	config.Outgoing = outgoing
+	config.FfmpegPath = viper.GetString("ffmpeg.path")
 
 	return config, nil
 }
