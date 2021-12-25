@@ -1,0 +1,14 @@
+[server]
+host = "localhost"
+port = 5672
+user = "guest"
+password = "pass"
+
+[incoming]
+name = "incoming"
+
+[outgoing]
+name = "outgoing"
+
+[origin]
+name = "MetalArchivesWrapper"
