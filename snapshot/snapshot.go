@@ -2,6 +2,7 @@ package snapshot
 
 import (
 	"crypto/rand"
+	"encoding/base32"
 	"fmt"
 	"os/exec"
 
@@ -22,7 +23,7 @@ func generateRandomString() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return string(randomBytes), nil
+	return base32.StdEncoding.EncodeToString(randomBytes)[:32], nil
 }
 
 func (s SnapshotHandler) DoSnapshot(job jobs.SnapshotJob) (string, error) {
@@ -34,8 +35,8 @@ func (s SnapshotHandler) DoSnapshot(job jobs.SnapshotJob) (string, error) {
 
 	streamUrl := fmt.Sprintf("rtsp://%s:%s@%s:%d%s", job.User, job.Password, job.IP, job.Port, job.SnapshotPath)
 	outputFile := fmt.Sprintf("/tmp/%s.jpg", output)
-	snapshotCommand := fmt.Sprintf("%s -y -i %s -vframes 1 %s", s.ffmpegPath, streamUrl, outputFile)
-	_, err := exec.Command(snapshotCommand).Output()
+
+	err := exec.Command(s.ffmpegPath, "-y", "-i", streamUrl, "-vframes", "1", outputFile).Run()
 
 	if err != nil {
 		return "", err
