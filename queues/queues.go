@@ -89,7 +89,13 @@ func StartJobManagement(config config.Config, snapshotHandler snapshot.SnapshotI
 	go func() {
 		for job := range jobsToProcess {
 
-			jobResult, _ := jobprocessor.ProcessJob(job.Body, snapshotHandler)
+			jobResult, die, _ := jobprocessor.ProcessJob(job.Body, snapshotHandler)
+
+			if die == true {
+				job.Ack(false)
+				processJobs <- false
+				return
+			}
 
 			err = outgoing_ch.Publish(
 				"",              // exchange
