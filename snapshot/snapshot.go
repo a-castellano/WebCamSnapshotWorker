@@ -14,7 +14,7 @@ type SnapshotInterface interface {
 }
 
 type SnapshotHandler struct {
-	ffmpegPath string
+	ExecPath string
 }
 
 func generateRandomString() (string, error) {
@@ -36,7 +36,28 @@ func (s SnapshotHandler) DoSnapshot(job jobs.SnapshotJob) (string, error) {
 	streamUri := fmt.Sprintf("rtsp://%s:%s@%s:%d%s", job.User, job.Password, job.IP, job.Port, job.SnapshotPath)
 	outputFile := fmt.Sprintf("/tmp/%s.jpg", output)
 
-	err := exec.Command(s.ffmpegPath, "-y", "-i", streamUri, "-vframes", "1", outputFile).Run()
+	err := exec.Command(s.ExecPath, "-y", "-i", streamUri, "-vframes", "1", outputFile).Run()
+
+	if err != nil {
+		return "", err
+	}
+	return outputFile, nil
+
+}
+
+type SnapshotMockHandler struct {
+	ExecPath string
+}
+
+func (s SnapshotMockHandler) DoSnapshot(job jobs.SnapshotJob) (string, error) {
+
+	output, outputerr := generateRandomString()
+	if outputerr != nil {
+		return output, outputerr
+	}
+
+	outputFile := fmt.Sprintf("/tmp/%s.jpg", output)
+	err := exec.Command("/usr/bin/touch", outputFile).Run()
 
 	if err != nil {
 		return "", err

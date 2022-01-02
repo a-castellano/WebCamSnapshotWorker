@@ -10,7 +10,7 @@ import (
 
 func TestSnapshotMock(t *testing.T) {
 
-	handler := SnapshotMockHandler{ffmpegPath: "foo"}
+	handler := SnapshotMockHandler{ExecPath: "foo"}
 	emptyJob := jobs.SnapshotJob{}
 	snapshotFile, err := handler.DoSnapshot(emptyJob)
 	if err != nil {

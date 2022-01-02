@@ -16,7 +16,7 @@ func TestEncodeAndDecodeJobs(t *testing.T) {
 		t.Errorf(`Encode failed.`)
 	}
 
-	if result.IP != job.IP {
+	if result.IP != "10.10.12.12" {
 		t.Errorf(`Encode failed.`)
 	}
 
