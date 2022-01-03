@@ -15,6 +15,7 @@ type SnapshotJob struct {
 	Password     string `json:"password"`
 	Port         int    `json:"port"`
 	StreamPath   string `json:"streampath"`
+	Sender       int    `json:"sender"`
 }
 
 func EncodeJob(job SnapshotJob) ([]byte, error) {
