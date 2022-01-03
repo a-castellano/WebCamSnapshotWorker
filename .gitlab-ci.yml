@@ -148,6 +148,7 @@ build_package:
     - cd $GOPATH/src/github.com/a-castellano/webcam-snapshot-worker
   script:
     - make build
+    - ls -lahrt
     - nfpm package --packager deb
     - mkdir deb_package
     - mv *.deb deb_package/
