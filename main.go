@@ -21,10 +21,10 @@ func main() {
 	}
 
 	log.Println("Reading config")
-	serviceConfig, err := config.ReadConfig()
+	serviceConfig, errConfig := config.ReadConfig()
 
-	if err != nil {
-		fmt.Println(err)
+	if errConfig != nil {
+		log.Fatal(errConfig)
 		os.Exit(1)
 	} else {
 		log.Println("Config readed successfully.")
