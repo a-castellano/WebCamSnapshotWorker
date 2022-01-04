@@ -1,3 +1,303 @@
+- semver: 0.0.2
+  date: 2022-01-04T21:52:34.704142261+01:00
+  packager: Álvaro Castellano Vela <alvaro.castellano.vela@gmail>
+  changes:
+  - commit: 6484ba3d25f30c49186b10251be04f2387621d1d
+    note: |-
+      Merge branch 'update_systemd' into 'master'
+
+      Update Systemd
+
+      See merge request a-castellano/WebCamSnapshotWorker!8
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 38302ba659cac01e59ca83026d6f5799fbf81bae
+    note: |-
+      Merge branch 'package' into 'master'
+
+      Package
+
+      See merge request a-castellano/WebCamSnapshotWorker!7
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 4df5af3b22996b6b88d35b5affac8e3479fa6702
+    note: |-
+      Merge branch 'package' into 'master'
+
+      Job struct needs a sender ID
+
+      See merge request a-castellano/WebCamSnapshotWorker!6
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: ff9a48d984cef18eba6043c0b5b44ff62c35b4db
+    note: |-
+      Merge branch 'package' into 'master'
+
+      Prepare release
+
+      See merge request a-castellano/WebCamSnapshotWorker!5
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: d63d2be22d35da1dfb16909e57b71db889916bbd
+    note: |-
+      Merge branch 'queues' into 'master'
+
+      Queues
+
+      See merge request a-castellano/WebCamSnapshotWorker!4
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 04616804553b170117b3c18476204b206777fc57
+    note: |-
+      Merge branch 'snapshot_handler' into 'master'
+
+      Snapshot handler
+
+      See merge request a-castellano/WebCamSnapshotWorker!3
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: aff3f93adc7318f1f546fdf5a0465543c26d79c3
+    note: |-
+      Merge branch 'config_file' into 'master'
+
+      Config file
+
+      See merge request a-castellano/WebCamSnapshotWorker!2
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: e225b3e4922522726a7278a2e869e9c919a9b655
+    note: |-
+      Merge branch 'prepare_project' into 'master'
+
+      Prepare project
+
+      See merge request a-castellano/WebCamSnapshotWorker!1
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 337190ae6650fd51cce951c3d1c229f75e30424a
+    note: Create README.md
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: e82e09293c8035d8b0a70f585d1e2e97f0ef29bd
+    note: Initial commit
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: GitHub
+      email: noreply@github.com
+  - commit: 364dadf9ab5e4003ce757e16bc0b2c584eb61cb9
+    note: Chaneg golang version
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: c48fa207f2bc446d6187374927fa00f2b149fba7
+    note: Add empty main
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 44cca861502f174de88f25b04a6d31c759638052
+    note: Setup CI and create jobs package
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 47c28745d0581b4503338215357377b9b502964c
+    note: Add config files
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 8ac44892cb570377de776827f7e2de13695f56f2
+    note: Write config reader
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: a0d64ec9af869bb7aa2e2168f928e244b7d3eaf5
+    note: Fix typo
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 94c1116a8692b4b1ec6555ca24bf1836609bdd1a
+    note: Test snapshot
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 587d9cbce73069fae397256b89cc4b055915c2d3
+    note: Write SnapshotHandler
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 260ac2c1edfbde3269f9b0f57d52f1b60afbe89d
+    note: Config requires ffmpeg path
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: e8e936b3a1fef702b4cfdb68468865d533769492
+    note: Test jobs through queues
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 12d9f1fd91963a0a138745e1469114e712021a04
+    note: Test send die
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 8c76d2600b78019db79613d0f85646aad39c5c46
+    note: manage die value for jobs to process
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: e38c4edb2ff0c0a5a600a880a5929a732029bbc0
+    note: Write main
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: eb646cd020c5ddc4b423400ed3b1a278494e97db
+    note: Define jobs
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 6b42fa0ab1dfc482722b7eb8122d259829d15be1
+    note: Prepare release
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 5eed3c89ee43c73a1e79144bd7b70a84d81354d1
+    note: Job struct needs a sender ID
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 62cdf892144d73321e0925da4aebd604d863a876
+    note: Package is ready
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: adf6521705280baa5c7bc4ade9da53c2e6e58c0b
+    note: Fix package
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 4da8a79b93611cebfbb36a56998c72e7ac9460ee
+    note: Fix package
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: bd0b6002f8c55f0319b3463416757e7bd13feba4
+    note: Fix ci
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 728713f02e5835de00c28b879745d144ba30dc62
+    note: Test package
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+  - commit: 1ada01c03c49d161fb06b977997727db444e7be0
+    note: Update Systemd
+    author:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
+    committer:
+      name: Álvaro Castellano Vela
+      email: alvaro.castellano.vela@gmail.com
 - semver: 0.0.1
   date: 2022-01-03T16:41:24.187062507+01:00
   packager: Álvaro Castellano Vela <alvaro.castellano.vela@gmail>
