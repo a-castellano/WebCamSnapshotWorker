@@ -5,7 +5,7 @@
 name: "windmaker-webcam-snapshot-worker"
 arch: "amd64"
 platform: "linux"
-version: "v0.0.3"
+version: "v0.0.1"
 section: "default"
 priority: "extra"
 provides:
@@ -19,7 +19,7 @@ homepage: "https://git.windmaker.net/a-castellano/WebCamSnapshotWorker"
 license: "BSD 2"
 changelog: "changelog.yaml"
 contents:
-- src: ./main
+- src: ./WebCamSnapshotWorker
   dst: /usr/local/bin/windmaker-webcam-snapshot-worker
 - src: ./packaging/deb/default/windmaker-webcam-snapshot-worker
   dst: /etc/default/windmaker-webcam-snapshot-worker
